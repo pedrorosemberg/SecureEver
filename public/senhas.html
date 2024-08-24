@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass - Gerador de Senhas - Developed by CODEVER</title>
+    <meta author="Pedro Paulo Rosemberg da Silva Oliveira - pedro@codever.com.br">
+    <link rel="stylesheet" href="../src/styles/senhas.css">
+    <link rel="icon" href="../src/assets/icons/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../src/assets/images/dev.png" alt="Codever Logo" class="logo">
+            
+        </header>
+        <main>
+            <h1>SecurePass - O seu gerador de senhas</h1><br>
+            <h2>Gere sua senha aqui:</h2>
+            <form id="passwordForm">
+                <div class="form-group">
+                    <label for="length">Comprimento da senha: <span id="lengthValue">12</span></label>
+                    <input type="range" id="length" name="length" min="10" max="50" value="12" required>
+                </div>
+                <div class="form-group" id="servicos-container">
+                    <div class="servico-item">
+                        <input type="checkbox" id="uppercase" name="uppercase" checked>
+                        <label for="uppercase">Letras maiúsculas</label>
+                    </div>
+                    <div class="servico-item">
+                        <input type="checkbox" id="lowercase" name="lowercase" checked>
+                        <label for="lowercase">Letras minúsculas</label>
+                    </div>
+                    <div class="servico-item">
+                        <input type="checkbox" id="numbers" name="numbers" checked>
+                        <label for="numbers">Números</label>
+                    </div>
+                    <div class="servico-item">
+                        <input type="checkbox" id="symbols" name="symbols" checked>
+                        <label for="symbols">Símbolos</label>
+                    </div>
+                </div>
+                <button type="submit" id="generateButton">Gerar Senha</button>
+            </form>
+            <div id="passwordDisplay" class="hidden">
+                <div id="passwordBox">
+                    <span id="result"></span>
+                </div>
+                <button id="copyButton">Copiar Senha</button>
+            </div>
+            <div id="strengthMeter" class="hidden">
+                <label for="strengthBar">Força da senha:</label>
+                <div id="strengthBar">
+                    <div id="strengthBarFill"></div>
+                </div>
+                <span id="strengthText"></span>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>&copy;2024 PEDRO ROSEMBERG</p>
+                <div class="footer-links">
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
